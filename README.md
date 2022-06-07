@@ -37,7 +37,7 @@ enum ParseError{
 
 As the end, the error can trans as the error of syn.
 
-```
+```rust
 let input: syn::parse::ParseStream;
 let span = input.span();
 let error_syn = ParseError::Something.to_syn_error(span);
