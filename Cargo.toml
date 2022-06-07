@@ -8,6 +8,7 @@ edition = "2021"
 [dependencies]
 to-syn-error-derive={path = "./to-syn-error-derive"}
 syn="1.0"
+proc-macro2="1.0"
 
 [dev-dependencies]
 thiserror="1.0"
