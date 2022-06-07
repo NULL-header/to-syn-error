@@ -17,6 +17,12 @@ impl InputError {
 #[derive(Debug)]
 pub struct Input(syn::ItemEnum);
 
+impl Input {
+    pub fn get_name(&self) -> &syn::Ident {
+        &self.0.ident
+    }
+}
+
 impl Parse for Input {
     fn parse(input: ParseStream) -> syn::Result<Self> {
         let item_enum: syn::ItemEnum = match input.parse() {
@@ -45,10 +51,5 @@ mod test {
             struct Mock;
         };
         assert.error(input, InputError::NotEnum);
-    }
-
-    #[test]
-    fn tmp() {
-        panic!("holder");
     }
 }

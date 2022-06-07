@@ -14,6 +14,13 @@ pub fn to_syn_error_derive(input: TokenStream) -> TokenStream {
             return e.to_compile_error().into();
         }
     };
-    dbg!(input);
-    quote! {}.into()
+    let name = input.get_name();
+    quote! {
+        impl ToSynError for #name{
+            fn to_syn_error(&self,span:proc_macro2::Span)->syn::Error{
+                syn::Error::new(span,self.to_string())
+            }
+        }
+    }
+    .into()
 }
