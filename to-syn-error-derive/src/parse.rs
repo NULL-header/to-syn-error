@@ -14,7 +14,6 @@ impl InputError {
     }
 }
 
-#[derive(Debug)]
 pub struct Input(syn::ItemEnum);
 
 impl Input {
