@@ -1,7 +1,10 @@
 [package]
 name = "to-syn-error-derive"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
+license = "MIT"
+description = "The derive macro for to-syn-error"
+repository = "https://github.com/NULL-header/to-syn-error"
 
 [lib]
 proc-macro = true
