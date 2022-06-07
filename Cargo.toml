@@ -1,7 +1,11 @@
 [package]
 name = "to-syn-error"
-version = "0.1.0"
+version = "1.0.0"
 edition = "2021"
+license = "MIT"
+description = "util to use with syn and thiserror"
+repository = "https://github.com/NULL-header/to-syn-error"
+readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
